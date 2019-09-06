@@ -33,6 +33,11 @@
             </tr>
           </thead>
           <tbody>
+            <tr *ngIf="allTodos && (allTodos.length < 1)">
+              <p class="has-text-centered">
+                No more tasks
+              </p>
+            </tr>
             <tr *ngFor="let todo of allTodos">
               <th>{{todo.id}}</th>
               <td>
